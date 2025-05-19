@@ -1,0 +1,146 @@
+export const configConstant = {
+  database: {
+    host: 'DATABASE_HOST',
+    port: 'DATABASE_PORT',
+    username: 'DATABASE_USERNAME',
+    password: 'DATABASE_PASSWORD',
+    name: 'DATABASE_NAME',
+  },
+
+  baseUrls: {
+    identityService: 'IDENTITY_SERVICE_URL',
+    notificationService: 'NOTIFICATION_SERVICE_URL',
+    coreService: 'CORE_SERVICE_URL',
+    identityFEUrl: 'IDENTITY_SERVICE_FE_URL',
+    completeSignupFE: 'IDENTITY_FE_COMPLETE_SIGNUP',
+    taoAuthBaseUrl: 'TAO_BASE_URL',
+  },
+  jwt: {
+    access_secret: 'ACCESS_SECRET',
+    access_time: 'ACCESS_TIME',
+    otp_time: 'OTP_EXPIRY_TIME',
+    refresh_secret: 'REFRESH_SECRET',
+    refresh_time: 'REFRESH_TIME',
+    reset_time: 'RESET_TIME',
+    reset_secret: 'RESET_SECRET',
+    verify_secret: 'JWT_VERIFICATION_TOKEN_SECRET',
+  },
+  amq: {
+    url: 'RABBITMQ_URL',
+    identity_queue: 'IDENTITY_QUEUE',
+    notify_queue: 'NOTIFY_QUEUE',
+    durable: 'RABBITMQ_DURABLE',
+    queue: 'CLASSORE_EVENTS_QUEUE',
+  },
+  google: {
+    clientID: 'GOOGLE_CLIENT_ID',
+    secretID: 'GOOGLE_CLIENT_SECRET',
+    auth_clientID: 'GOOGLE_AUTH_CLIENT_ID',
+    auth_secretID: 'GOOGLE_AUTH_CLIENT_SECRET',
+    auth_redirect_url: 'GOOGLE_AUTH_REDIRECT_URL',
+    api_url: 'GOOGLE_API_URL',
+    bucket_name: 'GOOGLE_BUCKET_NAME',
+    bucket_key_json: 'GOOGLE_BUCKET_KEY_JSON',
+  },
+
+  googleDrive: {
+    projectID: 'GOOGLE_DRIVE_PROJECT_ID',
+    privateKeyID: 'GOOGLE_DRIVE_PRIVATE_KEY_ID',
+    privateKey: 'GOOGLE_DRIVE_PRIVATE_KEY',
+    clientID: 'GOOGLE_DRIVE_CLIENT_ID',
+    clientEmail: 'GOOGLE_DRIVE_CLIENT_EMAIL',
+  },
+
+  headers: {
+    taoXclientID: 'X-CLIENT-ID',
+    taoAuthSignature: 'X-AUTH-SIGNATURE',
+    taoPublicKey: 'PUBLIC_KEY',
+  },
+  aws: {
+    AWS_ACCESS_KEY_ID: 'AWS_ACCESS_KEY_ID',
+    AWS_SECRET_ACCESS_KEY: 'AWS_SECRET_ACCESS_KEY',
+    AWS_BUCKET_NAME: 'AWS_BUCKET_NAME',
+    AWS_S3_DP_FOLDER: 'AWS_S3_DP_FOLDER',
+    AWS_S3_FARM_IMAGES_FOLDER: 'AWS_S3_FARM_IMAGES_FOLDER',
+    AWS_S3_LOGO_FOLDER: 'AWS_S3_LOGO_FOLDER',
+    AWS_IMAGE_URL: 'AWS_IMAGE_URL',
+    AWS_REGION: 'AWS_REGION',
+  },
+  paystack: {
+    PAYSTACK_PUBLIC_KEY: 'PAYSTACK_PUBLIC_KEY',
+    PAYSTACK_CALLBACK_URL: 'PAYSTACK_CALLBACK_URL',
+    PAYSTACK_BASE_URL: 'PAYSTACK_BASE_URL',
+    PAYSTACK_SECRET_KEY: 'PAYSTACK_SECRET_KEY',
+  },
+  cloudinary: {
+    //1
+    CLOUDINARY_NAME: 'CLOUDINARY_NAME',
+    CLOUDINARY_API_KEY: 'CLOUDINARY_API_KEY',
+    CLOUDINARY_API_SECRET: 'CLOUDINARY_API_SECRET',
+    //2
+    CLOUDINARY_NAME_1: 'CLOUDINARY_NAME_1',
+    CLOUDINARY_API_KEY_1: 'CLOUDINARY_API_KEY_1',
+    CLOUDINARY_API_SECRET_1: 'CLOUDINARY_API_SECRET_1',
+    //3
+    CLOUDINARY_NAME_2: 'CLOUDINARY_NAME_2',
+    CLOUDINARY_API_KEY_2: 'CLOUDINARY_API_KEY_2',
+    CLOUDINARY_API_SECRET_2: 'CLOUDINARY_API_SECRET_2',
+    //4
+    CLOUDINARY_NAME_3: 'CLOUDINARY_NAME_3',
+    CLOUDINARY_API_KEY_3: 'CLOUDINARY_API_KEY_3',
+    CLOUDINARY_API_SECRET_3: 'CLOUDINARY_API_SECRET_3',
+    //5
+    CLOUDINARY_NAME_4: 'CLOUDINARY_NAME_4',
+    CLOUDINARY_API_KEY_4: 'CLOUDINARY_API_KEY_4',
+    CLOUDINARY_API_SECRET_4: 'CLOUDINARY_API_SECRET_4',
+  },
+  mail_config: {
+    MAIL_AUTH_PASS: 'MAIL_AUTH_PASS',
+    MAIL_AUTH_USER: 'MAIL_AUTH_USER',
+    MAIL_HOST: 'MAIL_HOST',
+    MAIL_PORT: 'MAIL_PORT',
+    MAIL_SENDER: 'MAIL_SENDER',
+  },
+
+  mailgun_config: {
+    MAILGUN_API_KEY: 'MAILGUN_API_KEY',
+    MAILGUN_DOMAIN: 'MAILGUN_DOMAIN',
+  },
+
+  mailtarap_config: {
+    MAILTRAP_URL: 'MAILTRAP_URL',
+    MAILTRAP_API_TOKEN: 'MAILTRAP_API_TOKEN',
+    MAILTRAP_DOMAIN: 'MAILTRAP_DOMAIN',
+    MAIL_TRAP_JWT: 'MAIL_TRAP_JWT',
+    MAIL_TRAP_HOST: 'MAIL_TRAP_HOST',
+    MAIL_TRAP_PORT: 'MAIL_TRAP_PORT',
+    MAIL_TRAP_USERNAME: 'MAIL_TRAP_USERNAME',
+    MAIL_TRAP_PASSWORD: 'MAIL_TRAP_PASSWORD',
+  },
+
+  sendgrid_config: {
+    SENDGRID_API_KEY: 'SENDGRID_API_KEY',
+  },
+
+  brevo_config: {
+    BREVO_API_KEY: 'BREVO_API_KEY',
+    BREVO_USERNAME: 'BREVO_USERNAME',
+    BREVO_MAIL_HOST: 'BREVO_MAIL_HOST',
+    BREVO_MAIL_PORT: 'BREVO_MAIL_PORT',
+    BREVO_MAIL_PASSWORD: 'BREVO_MAIL_PASSWORD',
+  },
+
+  payment_provider: {
+    FLUTTERWAVE: 'FLUTTERWAVE',
+    PAYSTACK: 'PAYSTACK',
+  },
+
+  node: {
+    server: 'NODE_SERVER',
+  },
+
+  one_signal: {
+    APP_ID: 'ONE_SIGNAL_APP_ID',
+    API_KEY: 'ONE_SIGNAL_API_KEY',
+  },
+};
