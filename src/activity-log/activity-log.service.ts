@@ -1,5 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CreateActivityLogDto } from './dto/create-activity-log.dto';
+import {
+  CreateActivityLogDto,
+  EventLogDto,
+} from './dto/create-activity-log.dto';
 import { UpdateActivityLogDto } from './dto/update-activity-log.dto';
 import { Repository } from 'typeorm';
 import { ActivityLog, User } from 'src/entities';
@@ -15,7 +18,7 @@ export class ActivityLogService {
     private readonly userLogRepo: Repository<User>,
   ) {}
 
-  async userLogin(data: any) {
+  async userLogin(data: EventLogDto) {
     try {
       const createData: CreateActivityLogDto = {
         type: EventType.USER_LOGIN,
@@ -35,8 +38,30 @@ export class ActivityLogService {
     }
   }
 
-  findAll() {
-    return `This action returns all activityLog`;
+  async updateCourseProgress(
+    data: EventLogDto,
+    event_type = EventType.MODULE_CONSUMPTION,
+  ) {
+    try {
+      const createData: CreateActivityLogDto = {
+        type: event_type,
+        user_id: data?.user_id,
+        description: `${data.progress}% progress was made on module ${data.module}, chapter ${data.chapter} of ${data.subject} at ${data.current_time.toLocaleString()} `,
+        is_successful: data?.success,
+        meta: {
+          chosen_bundle: data?.chosen_bundle,
+          ...(data?.error && { error_message: data?.error }),
+        },
+      };
+      const createdLog = this.activityLogRepo.create(createData);
+      await this.activityLogRepo.save(createdLog);
+      return;
+    } catch (error) {
+      console.log(
+        '🚀 ~ ActivityLogService ~ updateCourseProgress ~ error:',
+        error,
+      );
+    }
   }
 
   findOne(id: number) {
