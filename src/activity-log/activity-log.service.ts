@@ -63,16 +63,4 @@ export class ActivityLogService {
       );
     }
   }
-
-  findOne(id: number) {
-    return `This action returns a #${id} activityLog`;
-  }
-
-  update(id: number, updateActivityLogDto: UpdateActivityLogDto) {
-    return `This action updates a #${id} activityLog`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} activityLog`;
-  }
 }
